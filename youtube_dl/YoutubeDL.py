@@ -656,7 +656,7 @@ class YoutubeDL(object):
             template_dict = dict((k, v if isinstance(v, compat_numeric_types) else sanitize(k, v))
                                  for k, v in template_dict.items()
                                  if v is not None and not isinstance(v, (list, tuple, dict)))
-            template_dict = collections.defaultdict(lambda: 'NA', template_dict)
+            template_dict = collections.defaultdict(lambda: '', template_dict)
 
             outtmpl = self.params.get('outtmpl', DEFAULT_OUTTMPL)
 
